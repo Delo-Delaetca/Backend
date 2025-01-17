@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>аккаунт?</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+
+    <h1>Войдите в аккаунт</h1>
+    <form action="../auth" method="post">
+      {% csrf_token %}
+      <label>Логин</label>
+      <input type="text" name="login">
+      <label>Пароль</label>
+      <input type="text" name="pass">
+      <button type="submit">Войти</button>
+    </form>
+    <a href="../reg"><button>Нет аккаунта :(</button></a>
+  </body>
+</html>

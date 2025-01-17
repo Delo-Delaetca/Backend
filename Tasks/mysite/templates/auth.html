@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>что-то</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <h1>Ваше имя:</h1>
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" name="name">
+      <button type="submit">Продолжить</button>
+    </form>
+
+    {% if name %}
+    <p>Вас зовут... {{name.0}}...</p>
+    {% endif %}
+  </body>
+
+
+</html>
