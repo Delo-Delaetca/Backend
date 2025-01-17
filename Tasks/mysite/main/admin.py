@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import User
 
-# Пока хотя бы так
+# Особо пока не вдумывался
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     pass

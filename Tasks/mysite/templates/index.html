@@ -8,15 +8,16 @@
 
   <body>
 
-    <h1>Войдите в аккаунт</h1>
-    <form action="../auth" method="post">
-      {% csrf_token %}
-      <label>Логин</label>
-      <input type="text" name="login">
-      <label>Пароль</label>
-      <input type="text" name="pass">
-      <button type="submit">Войти</button>
-    </form>
-    <a href="../reg"><button>Нет аккаунта :(</button></a>
+    <a href='create'  ><button>Создать нового пользователя</button></a>
+    {% for i in Users %}
+    <div style="background-color: rgb(244, 215, 177);">
+      <h1>{{i.login}}</h1>
+      <a href='read/{{i.id}}'  ><button>Подобнее</button></a>
+      <a href='delete/{{i.id}}'  ><button>Удалить</button></a>
+    </div>
+
+
+    {% endfor %}
+
   </body>
 </html>
