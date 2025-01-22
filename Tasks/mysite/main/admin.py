@@ -38,4 +38,4 @@ class OrderItemAdmin(admin.ModelAdmin):
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('id', 'book', 'rating')
+    list_display = ('id', 'book', 'content', 'rating')
